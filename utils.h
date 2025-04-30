@@ -22,7 +22,7 @@ void print_plaintext(uint8_t *plaintext) {
 
 void recv_message(uint8_t *message) {
     int ret = sodium_init();
-    strcpy_s(message + 16, "\"Beware the Jabberwock, my son!\"");
+    strcpy(message + 16, "\"Beware the Jabberwock, my son!\"");
 }
 
 void decrypt_message(uint8_t *iv, uint8_t *ct, uint8_t *pt) {
